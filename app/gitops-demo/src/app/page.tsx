@@ -1,64 +1,62 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 text-gray-800 px-6 py-12">
-      <header className="text-center mb-8">
-        <h1 className="text-3xl sm:text-5xl font-bold mb-4">Welcome to My App</h1>
-        <p className="text-lg sm:text-xl text-gray-600">
-          A modern and minimalistic Next.js app.
+    <div className="flex flex-col items-center justify-center min-h-screen px-6 bg-gradient-to-b from-gray-900 via-black to-gray-800 text-white">
+      {/* Header */}
+      <header className="text-center mb-16">
+        <h1 className="text-7xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent animate-gradient">
+          GitOps Demo
+        </h1>
+        <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+          Experience the future of automated workflows with GitOps. Declarative,
+          automated, and versioned.
         </p>
       </header>
-      <main className="flex flex-col items-center gap-8">
-        <Image
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={120}
-          height={40}
-          className="dark:invert"
-        />
-        <div className="flex gap-4">
+
+      {/* Hero Section */}
+      <main className="flex flex-col items-center gap-20">
+        {/* Features */}
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl text-center">
+          <div className="relative group bg-gray-900 p-10 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition">
+            <h3 className="text-3xl font-bold text-cyan-400 mb-4">
+              Versioned Configurations
+            </h3>
+            <p className="text-gray-400">
+              Keep every configuration versioned in Git for a reliable workflow.
+            </p>
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-600 opacity-0 group-hover:opacity-20 rounded-xl transition"></div>
+          </div>
+          <div className="relative group bg-gray-900 p-10 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition">
+            <h3 className="text-3xl font-bold text-purple-400 mb-4">
+              Automated Pipelines
+            </h3>
+            <p className="text-gray-400">
+              Deploy changes instantly with automated CI/CD pipelines.
+            </p>
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-500 opacity-0 group-hover:opacity-20 rounded-xl transition"></div>
+          </div>
+          <div className="relative group bg-gray-900 p-10 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition">
+            <h3 className="text-3xl font-bold text-green-400 mb-4">
+              System Reconciliation
+            </h3>
+            <p className="text-gray-400">
+              Ensure your system always matches the desired state in Git.
+            </p>
+            <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-blue-500 opacity-0 group-hover:opacity-20 rounded-xl transition"></div>
+          </div>
+        </section>
+
+        {/* Call-to-Actions */}
+        <div className="flex flex-wrap justify-center gap-6 mt-12">
           <a
-            href="https://nextjs.org/docs"
+            href="https://github.com/ItsGaet"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-blue-500 text-white text-sm px-6 py-3 rounded-full shadow hover:bg-blue-600 transition"
+            className="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-10 py-4 rounded-full shadow-xl transform hover:scale-110 hover:shadow-2xl transition"
           >
-            Get Started
-          </a>
-          <a
-            href="https://vercel.com/new"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gray-200 text-gray-800 text-sm px-6 py-3 rounded-full shadow hover:bg-gray-300 transition"
-          >
-            Deploy Now
+            View Repository
           </a>
         </div>
       </main>
-      <footer className="mt-12 text-center text-sm text-gray-500">
-        <p>
-          Powered by{" "}
-          <a
-            href="https://nextjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
-          >
-            Next.js
-          </a>{" "}
-          and{" "}
-          <a
-            href="https://vercel.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
-          >
-            Vercel
-          </a>
-          .
-        </p>
-      </footer>
     </div>
   );
 }
